@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			margin-bottom: 10px;
+		}
+		
+		.container div {
+			height: 100px;
+			color: #fff;
+		}
+		
+		.left {
+			background-color: #F00;
+			
+		}
+		
+		.right {
+			background-color: #00F;
+		}
+		
+    </style>
+</head>
+<body>
+
+	<!--浮动-外边距方法-->
+	<div class="container">
+		<div class="left" style="float: left; width: 100px;">left</div>
+		<div class="right" style="margin-left: 100px;">right</div>
+	</div>
+	
+	<div class="container">
+		<div class="left" style="float: right; width: 100px;">right</div>
+		<div class="right" style="margin-right: 100px;">left</div>
+	</div>
+	
+	<!--绝对定位-外边距方法-->
+	<div class="container">
+		<div class="left" style="position: absolute; width: 100px;">left</div>
+		<div class="right" style="margin-left: 100px;">right</div>
+	</div>
+	
+	<div class="container">
+		<div class="left" style="position: absolute; right:0; width: 100px;">right</div>
+		<div class="right" style="margin-right: 100px;">left</div>
+	</div>
+	
+	<!--浮动-溢出隐藏方法-->
+	<div class="container">
+		<div class="left" style="float: left; width: 100px;">left</div>
+		<div class="right" style="overflow: hidden;">right</div>
+	</div>
+	
+	<div class="container">
+		<div class="left" style="float: right; width: 100px;">right</div>
+		<div class="right" style="overflow: hidden;">left</div>
+	</div>
+	
+	<!--绝对定位方法-->
+	<div class="container" style="height: 100px; margin-bottom: 10px;">
+		<div class="left" style="position: absolute; width: 100px;">left</div>
+		<div class="right" style="position: absolute; left: 100px; right:0;">right</div>
+	</div>
+	
+	<div class="container" style="height: 100px; margin-bottom: 10px;">
+		<div class="left" style="position: absolute; right: 0; width: 100px;">right</div>
+		<div class="right" style="position: absolute; left:0; right: 100px;">left</div>
+	</div>
+	
+	<!--负margin方法-->
+	<div class="container" style="margin-left: 100px; _zoom: 1;">
+		<div class="left" style="float: left; width: 100px; margin-left: -100px; position: relative;">left</div>
+		<div class="right">right</div>
+	</div>
+		
+	<div class="container" style="margin-right: 100px; _zoom: 1;">
+		<div class="left" style="float: right; width: 100px; margin-right: -100px; position: relative;">right</div>
+		<div class="right">left</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

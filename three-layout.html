@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<!-- 一种方法  -->
+<style>
+	body{margin:0;padding:0;}
+	div{height:100px;text-align: left;}
+	.mt10{margin-top:10px;}
+	.test1 .left{float:left;width:200px;background:#6f0;}
+	.test1 .right{float:right;width:200px;background:#f60;}
+	.test1 .main{margin:0 200px;background:#66f;}
+</style>
+<div class="test1 mt10">
+	<div class="left">left</div>
+	<div class="right">right</div>
+	<div class="main">1main</div>
+</div>
+
+
+<!-- 二种方法  -->
+<style>
+	.test2 .left{float:left;width:200px;background:#6f0;}
+	.test2 .right{float:right;width:200px;background:#f60;}
+	.test2 .main{background:#66f;}
+</style>
+<div class="test2 mt10">
+	<div class="left">left</div>
+	<div class="right">right</div>
+	<div class="main">2main</div>
+</div>
+
+
+<!-- 三种方法  -->
+<style>
+	.test3{position:relative;}
+	.test3 .left{position:absolute;top:0;left:0;width:200px;background:#6f0;}
+	.test3 .right{position:absolute;top:0;right:0;width:200px;background:#f60;}
+	.test3 .main{margin:0 200px;background:#66f;}
+</style>
+<div class="test3 mt10">
+	<div class="left">left</div>
+	<div class="right">right</div>
+	<div class="main">3main</div>
+</div>
+
+<!-- 四种方法 css3  -->
+<style>
+	.test4{display:-webkit-flex;_display:none;}
+	.test4 .left{width:200px;background:#6f0;}
+	.test4 .right{width:200px;background:#f60;}
+	.test4 .main{flex:1;background:#66f;}
+</style>
+<div class="test4 mt10">
+	<div class="left">left</div>
+	<div class="main">4main</div>
+	<div class="right">right</div>
+</div>
+
+
+<!-- 实现中间固定两边自适应 css3  -->
+<style>
+	.test5{display:-webkit-flex;_display:none;}
+	.test5 .left{flex:2;background:#6f0;}
+	.test5 .right{flex:2;background:#f60;}
+	.test5 .main{width:460px;background:#66f;}
+</style>
+<div class="test5 mt10">
+	<div class="left">left</div>
+	<div class="main">5main</div>
+	<div class="right">right</div>
+</div>
+
+</body>
+</html>
